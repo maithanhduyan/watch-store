@@ -13,11 +13,7 @@
 
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 
-  {% if title %}
-  <title>Flask Blog - {{ title }}</title>
-  {% else %}
-  <title>Flask Blog</title>
-  {% endif %}
+  <title>{% block title %}{% endblock %} - Watch Store</title>
 </head>
 
 <body>
