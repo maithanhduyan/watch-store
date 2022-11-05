@@ -7,4 +7,4 @@ Flask-WTF
 flask-marshmallow
 marshmallow-sqlalchemy
 email-validator
-
+psycopg2-binary

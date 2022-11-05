@@ -1,24 +1,13 @@
-from flask import render_template, url_for, flash, redirect
-from server import app
-from forms import RegistrationForm, LoginForm
-from models.post import  Post
-from models.user import  User
+from flask import render_template, flash, redirect, url_for
+from . import app
+from .forms import LoginForm, RegistrationForm
+from .models import Post, User
 
 
-posts = [
-    {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
-    },
-    {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
-    }
-]
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('index.html', title='Home')
 
 
 @app.route("/")
@@ -26,7 +15,7 @@ posts = [
 def home():
     postAll = Post.query.all()
     print(postAll)
-    user=User.query.all()
+    user = User.query.get_or_404(1)
     print(user)
     return render_template('index.html', posts=postAll)
 
