@@ -8,5 +8,5 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_RECORD_QUERIES = True
     FLASKY_DB_QUERY_TIMEOUT = 0.5
-    SQLALCHEMY_DATABASE_URI='postgresql://postgres:123@localhost/flask' or 'sqlite:///'+os.path.join(basedir,'shop.db')
+    SQLALCHEMY_DATABASE_URI='postgresql://postgres:123@localhost/watch' or 'sqlite:///'+os.path.join(basedir,'watch.db')
     SQLALCHEMY_TRACK_MODIFICATIONS=False

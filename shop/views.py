@@ -1,21 +1,26 @@
 from flask import render_template
 from . import app
+from .models import Product
+from . import db
 
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Home')
+    all_product = Product.query.all()
+    return render_template('index.html', title='Home', products=all_product)
 
 
 @app.route('/products')
 def products():
-    return render_template('products.html', title='Products')
+    all_product = Product.query.all()
+    return render_template('products.html', title='Products', products=all_product)
 
 
-@app.route('/product-details')
-def product_details():
-    return render_template('product-details.html', title='Product Details')
+@app.route('/product-details/<int:id>')
+def product_details(id):
+    product = Product.query.get(id)
+    return render_template('product-details.html', title='Product Details', product=product)
 
 
 @app.route('/blog')
@@ -32,9 +37,11 @@ def blog_details():
 def contact():
     return render_template('contact.html', title='Contact')
 
+
 @app.route('/terms-conditions')
 def terms_conditions():
     return render_template('terms-conditions.html', title='Terms of Conditions')
+
 
 @app.route('/privacy-policy')
 def privacy_policy():
