@@ -20,6 +20,9 @@
 [Flask-SQLAlchemy](https://flask-migrate.readthedocs.io/en/latest/)
 [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/)
 
+
+[Icons8](https://icons8.com/)
+
 ## Clear Cache
 ~~~
 python -Bc "import pathlib; [p.unlink() for p in pathlib.Path('.').rglob('*.py[co]')]"

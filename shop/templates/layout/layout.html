@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} - M|Watch</title>
+    <meta name="keywords" content="M|Watch">
+    <meta name="description" content="M|Watch">
+    <meta name="author" content="Mai Thành Duy An">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/icons/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/icons/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/icons/favicon.png') }}">
+    <meta name="apple-mobile-web-app-title" content="M|Watch">
+    <meta name="application-name" content="M|Watch">
+    <meta name="msapplication-TileColor" content="#f9a743">
+    <meta name="theme-color" content="#f9a743">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Carousel -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/slick.min.css')}}"
+        crossorigin="anonymous" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/icon-fonts.css')}}">
+    <!-- Custom CSS -->
+    {% block custom_css %}{% endblock %}
+</head>
+
+
+<body>
+    <!-- Header -->
+    {% include 'layout/header.html' %}
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    {% include 'layout/footer.html' %}
+
+    <!-- Custom JS -->
+    {% block custom_js %}{% endblock %}
+</body>
+
+</html>
