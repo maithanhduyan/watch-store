@@ -1,6 +1,6 @@
 {% extends "layout/layout.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %} {{title}} {% endblock %}
 {% block custom_css %}{% endblock %}
 
 {% block content %}
@@ -41,13 +41,13 @@
                     <h4 class="font-weight-bold mb-2">Smooth Touch</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?</p>
                 </div>
-                
+
                 <div class="mb-40 text-center text-md-left">
                     <span class="material-icons md-36">design_services</span>
                     <h4 class="font-weight-bold mb-2">Elegant Design</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?</p>
                 </div>
-                
+
                 <div class="mb-40 text-center text-md-left">
                     <span class="material-icons md-36">diamond</span>
                     <h4 class="font-weight-bold mb-2">Easy Pricing</h4>
@@ -317,8 +317,4 @@
 </section>
 {% endblock content %}
 
-
-
-{% block custom_js %}
-
-{% endblock %}
+{% block custom_js %}{% endblock %}
