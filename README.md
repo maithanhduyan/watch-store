@@ -1,6 +1,8 @@
 
 # Watch Store ecommerce base on Flask
 
+#### Watch Store Galery
+![Home Page](https://github.com/maithanhduyan/watch-store/blob/master/shop/static/images/screencapture.png?raw=true)
 #### Create new venv on Windows
 > py -3 -m venv venv
 > venv\Scripts\activate
@@ -9,8 +11,8 @@
 - Add venv package to requirements.txt
 > pip freeze > requirements.txt
 #### Run Server
-> flask --app server run
-> flask --app server --debug run
+> flask --app shop run
+> flask --app shop --debug run
 #### Add packages into requirements.txt
 > pip freeze > requirements.txt 
 
