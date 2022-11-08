@@ -8,18 +8,31 @@
 <section class="section">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 text-center mb-5">
+            <div class="col-4"></div>
+            <div class="col-4">
                 <form method="post">
-                    <label for="username">Username</label>
-                    <input name="username" id="username" required>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
-                    <input type="submit" value="Register">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
+                            placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="repassword">Re-enter Password</label>
+                        <input name="repassword" type="password" class="form-control" id="repassword" placeholder="Re-enter Password">
+                    </div>
+                    <input class="btn btn-main" type="submit" value="Đăng Ký" />
+                    <input class="btn btn-main" type="reset" value="Làm Lại" />
                 </form>
             </div>
+            <div class="col-4"></div>
         </div>
     </div>
 </section>
+
 {% endblock content %}
 
 {% block custom_js %}{% endblock %}

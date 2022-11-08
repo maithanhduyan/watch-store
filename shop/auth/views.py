@@ -15,6 +15,7 @@ from .models import User
 
 auth = Blueprint("auth", __name__, url_prefix="/auth")
 
+
 def login_required(view):
     """View decorator that redirects anonymous users to the login page."""
 
@@ -26,6 +27,7 @@ def login_required(view):
         return view(**kwargs)
 
     return wrapped_view
+
 
 @auth.route("/register", methods=("GET", "POST"))
 def register():
@@ -56,7 +58,7 @@ def register():
 
         flash(error)
 
-    return render_template("auth/register.html")
+    return render_template("auth/register.html", title='Register')
 
 
 @auth.route('/login', methods=("GET", "POST"))
@@ -81,4 +83,4 @@ def login():
             return redirect(url_for("index"))
 
         flash(error)
-    return render_template("auth/login.html")
+    return render_template("auth/login.html", title='Login')
