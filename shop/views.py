@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+
 from flask import render_template
 from . import app
 from .models import Product
-from . import db
+# from shop import db
 
 
 @app.route('/')

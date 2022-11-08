@@ -19,10 +19,8 @@
 
 ## References
 [Flask](https://flask.palletsprojects.com/en/latest/)
-[Flask-SQLAlchemy](https://flask-migrate.readthedocs.io/en/latest/)
+[Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/latest/)
 [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/)
-
-
 [Icons8](https://icons8.com/)
 
 ## Clear Cache

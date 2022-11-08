@@ -20,24 +20,40 @@ def init_database():
     return
 
 
-def db_command():
-    """Clear the existing data and create new tables."""
-    app.cli.add_command(db_create_all_command)
-
-
-@click.command('db_create_all')
+@click.command('db-create-all')
 def db_create_all_command():
     """Clear the existing data and create new tables."""
     db.create_all()
     click.echo('Created All Tables')
 
 
+@click.command('db-drop-all')
+def db_drop_all_command():
+    """Drop all tables."""
+    db.drop_all()
+    click.echo('Drop All Tables')
+
+
+@click.command('db-insert-data-sample')
+def db_insert_data_sample_command():
+    """Data Sample"""
+    db_create_all_command()
+
+    click.echo('Drop All Tables')
+
+
+def db_command():
+    app.cli.add_command(db_create_all_command)
+    app.cli.add_command(db_drop_all_command)
+
+
 with app.app_context():
-    # Database
     init_database()
     db_command()
-
-    #
     from .api import api
-    app.register_blueprint(api, url_prefix='/api')
+    from .auth import auth
+    app.register_blueprint(api)
+    app.register_blueprint(auth)
+    # make "index" point at "/", which is handled by "blog.index"
+    app.add_url_rule("/", endpoint="index")
     from . import views

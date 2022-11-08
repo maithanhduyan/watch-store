@@ -1,0 +1,25 @@
+{% extends "layout/layout.html" %}
+
+{% block title %} {{title}} {% endblock %}
+{% block custom_css %}{% endblock %}
+
+{% block content %}
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center mb-5">
+                <form method="post">
+                    <label for="username">Username</label>
+                    <input name="username" id="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block custom_js %}{% endblock %}
